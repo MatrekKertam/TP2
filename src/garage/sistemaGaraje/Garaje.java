@@ -11,7 +11,7 @@ public class Garaje {
     private String direccion;
     private int stockDeRuedas;
     private int precioDeRuedas;
-    private boolean espacioDisponible;
+    protected boolean espacioDisponible;
     private Vehiculos kilometrosTotales;
 
     public int getCapacidad() {
