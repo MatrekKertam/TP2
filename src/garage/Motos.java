@@ -1,10 +1,14 @@
 package garage;
 
-public class Motos {
+public class Motos extends Vehiculos {
 
     private int cilindrada;
 
-    public int getCilindrada(){
+    public int getCilindrada() {
         return cilindrada;
+    }
+
+    public void setCilindrada(int cilindrada) {
+        this.cilindrada = cilindrada;
     }
 }
