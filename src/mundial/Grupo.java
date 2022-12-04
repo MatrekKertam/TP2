@@ -4,8 +4,17 @@ import java.util.ArrayList;
 
 public class Grupo extends EtapaMundial {
 
-    Grupo(){
+    private ArrayList<Equipo> equipos;
+
+    Grupo() {
         super();
+    }
+
+    public Grupo(String descripcionEtapa){
+        super();
+        setDescripcionEtapa(descripcionEtapa);
+        this.equipos = new ArrayList<>();
+
     }
 
     @Override

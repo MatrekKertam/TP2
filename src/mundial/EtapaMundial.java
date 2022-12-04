@@ -21,6 +21,10 @@ public class EtapaMundial {
         this.partidos = partidos;
     }
 
+    public void setDescripcionEtapa(String descripcionEtapa) {
+        this.descripcionEtapa = descripcionEtapa;
+    }
+
     public ArrayList<Partido> getPartidos(){
         return partidos;
     }
