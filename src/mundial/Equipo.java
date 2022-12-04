@@ -1,11 +1,16 @@
 package mundial;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
 
 public class Equipo {
 
     private String nombre;
     private ArrayList<Partido> partidosJugados;
+
+    public Equipo(String nombre) {
+        this.nombre = nombre;
+        this.partidosJugados = partidosJugados;
+    }
 
     public String getNombre(){
         return nombre;
