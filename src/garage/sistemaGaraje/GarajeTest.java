@@ -1,4 +1,4 @@
-package garage;
+package garage.sistemaGaraje;
 
 public class GarajeTest {
     private Garaje vehiculos;

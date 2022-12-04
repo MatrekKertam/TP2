@@ -1,4 +1,4 @@
-package garage;
+package garage.Vehiculos;
 
 public class Autos extends Vehiculos{
 

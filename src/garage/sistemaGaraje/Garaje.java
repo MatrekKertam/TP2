@@ -1,4 +1,6 @@
-package garage;
+package garage.sistemaGaraje;
+
+import garage.Vehiculos.Vehiculos;
 
 import java.util.Date;
 
