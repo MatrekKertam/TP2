@@ -36,4 +36,12 @@ public class Resultado {
     public boolean empate(){
         return empato;
     }
+
+    @Override
+    public String toString() {
+        return  "Goles del equipo local= " + golesLocal +
+                " Goles del equipo visitante= " + golesVisitante +
+                ", Gano el equipo local: " + gano +
+                ", Empataron: " + empato;
+    }
 }

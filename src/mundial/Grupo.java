@@ -26,4 +26,9 @@ public class Grupo extends EtapaMundial {
     public ArrayList<Equipo> getEquiposQueAvanzan() {
         return super.getEquiposQueAvanzan();
     }
+
+    @Override
+    public String toString() {
+        return getDescripcionEtapa();
+    }
 }

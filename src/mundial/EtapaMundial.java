@@ -17,8 +17,8 @@ public class EtapaMundial {
         return descripcionEtapa;
     }
 
-    public void addPartido(ArrayList<Partido> partidos){
-        this.partidos = partidos;
+    public void addPartido(Partido partidos){
+        this.partidos.add(partidos);
     }
 
     public void setDescripcionEtapa(String descripcionEtapa) {
@@ -27,6 +27,10 @@ public class EtapaMundial {
 
     public ArrayList<Partido> getPartidos(){
         return partidos;
+    }
+
+    public void setPartidos(ArrayList<Partido> partidos) {
+        this.partidos = partidos;
     }
 
     public ArrayList<Equipo> getEquiposQueAvanzan(){
