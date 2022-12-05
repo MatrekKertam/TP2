@@ -16,7 +16,9 @@ public class Grupo extends EtapaMundial {
         this.equipos = new ArrayList<>();
 
     }
-
+    public void setEquipoQuePasa(Equipo equipos){
+        this.equipos.add(equipos);
+    }
     @Override
     public ArrayList<Partido> getPartidos() {
         return super.getPartidos();
@@ -24,7 +26,7 @@ public class Grupo extends EtapaMundial {
 
     @Override
     public ArrayList<Equipo> getEquiposQueAvanzan() {
-        return super.getEquiposQueAvanzan();
+        return equipos;
     }
 
     @Override

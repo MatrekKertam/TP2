@@ -9,6 +9,7 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args){
 
+        //creacion de un grupo
         Grupo C = new Grupo("Mundial Qatar 2022, Grupo C");
 
         //equipos
@@ -17,19 +18,24 @@ public class Main {
         Equipo arabiaSaudita = new Equipo("Arabia Saudita");
         Equipo Polonia = new Equipo("Polonia");
 
-        //partidos
+        //se agregan los equipos al grupo C
+        C.addEquipo(Argentina);
+        C.addEquipo(arabiaSaudita);
+        C.addEquipo(Polonia);
+        C.addEquipo(Mexico);
+
+        //partidos y agregado de puntos
         Partido nro1 = new Partido(new Date(2022,10,22), Argentina, arabiaSaudita, new Resultado(1, 2, false,false));
         Partido nro2 = new Partido(new Date(2022,10,22), Polonia, Mexico, new Resultado(0,0, false, true));
         Partido nro3 = new Partido(new Date(2022,10,26), Argentina, Mexico, new Resultado(2,0, true, false));
         Partido nro4 = new Partido(new Date(2022,10,26), Polonia, arabiaSaudita, new Resultado(2,0, true, false));
         Partido nro5 = new Partido(new Date(2022,10,30), Argentina, Polonia, new Resultado(2,0, true, false));
         Partido nro6 = new Partido(new Date(2022,10,30), Mexico, arabiaSaudita, new Resultado(2,1, true, false));
+        Argentina.setPuntos(6);
+        Polonia.setPuntos(4);
+        Mexico.setPuntos(4);
+        arabiaSaudita.setPuntos(3);
 
-        //se agregan los equipos al grupo C
-        C.addEquipo(Argentina);
-        C.addEquipo(arabiaSaudita);
-        C.addEquipo(Polonia);
-        C.addEquipo(Mexico);
 
         //se agregan los partidos al grupo C
         C.addPartido(nro1);
@@ -41,7 +47,15 @@ public class Main {
 
         //impresion de pantalla
         System.out.println(C);
-        
+        System.out.println("\nPuntos del grupo: \n\n" + Argentina.getNombre() + " tiene " + Argentina.getPuntos() + " puntos\n"
+                + Polonia.getNombre() + " tiene " + Polonia.getPuntos() + " puntos\n"
+                + Mexico.getNombre() + " tiene " + Mexico.getPuntos() + " puntos\n"
+                + arabiaSaudita.getNombre() + " tiene " + arabiaSaudita.getPuntos() + " puntos\n");
+
+        C.setEquipoQuePasa(Argentina);
+        C.setEquipoQuePasa(Polonia);
+
+        System.out.println("Equipos del grupo C que avanzaron: " + C.getEquiposQueAvanzan());
 
     }
 }

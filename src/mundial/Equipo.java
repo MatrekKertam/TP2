@@ -6,6 +6,7 @@ public class Equipo {
 
     private String nombre;
     private ArrayList<Partido> partidosJugados;
+    private int puntos;
 
     public Equipo(String nombre) {
         this.nombre = nombre;
@@ -19,6 +20,15 @@ public class Equipo {
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
+
+    public int getPuntos(){
+        return puntos;
+    }
+
+    public void setPuntos(int puntos){
+        this.puntos= puntos;
+    }
+
 
     @Override
     public String toString() {

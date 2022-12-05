@@ -4,13 +4,13 @@ public class Resultado {
 
     private int golesLocal;
     private int golesVisitante;
-    private boolean gano;
+    private boolean ganoLocal;
     private boolean empato;
 
     public Resultado(int golesLocal, int golesVisitante, boolean gano, boolean empato) {
         this.golesLocal = golesLocal;
         this.golesVisitante = golesVisitante;
-        this.gano = gano;
+        this.ganoLocal = ganoLocal;
         this.empato = empato;
     }
 
@@ -31,7 +31,7 @@ public class Resultado {
     }
 
     public boolean ganoLocal(){
-        return gano;
+        return ganoLocal;
     }
     public boolean empate(){
         return empato;
@@ -41,7 +41,7 @@ public class Resultado {
     public String toString() {
         return  "Goles del equipo local= " + golesLocal +
                 " Goles del equipo visitante= " + golesVisitante +
-                ", Gano el equipo local: " + gano +
+                ", Gano el equipo local: " + ganoLocal +
                 ", Empataron: " + empato;
     }
 }
