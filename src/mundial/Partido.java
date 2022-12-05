@@ -39,7 +39,7 @@ public class Partido {
 
     @Override
     public String toString() {
-        return "Fecha: " + fecha + " " + local + " VS " + visitante + " Resultado: " + resultado;
+        return "\nFecha: " + fecha + " " + local + " VS " + visitante + " Resultado: " + resultado;
     }
 }
 

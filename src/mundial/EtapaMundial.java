@@ -33,6 +33,14 @@ public class EtapaMundial {
         this.partidos = partidos;
     }
 
+    public void addEquipo(Equipo equipos){
+        this.equipos.add(equipos);
+    }
+
+    public ArrayList<Equipo> getEquipos() {
+        return equipos;
+    }
+
     public ArrayList<Equipo> getEquiposQueAvanzan(){
         return equipos;
     }

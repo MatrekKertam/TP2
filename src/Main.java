@@ -25,6 +25,12 @@ public class Main {
         Partido nro5 = new Partido(new Date(2022,10,30), Argentina, Polonia, new Resultado(2,0, true, false));
         Partido nro6 = new Partido(new Date(2022,10,30), Mexico, arabiaSaudita, new Resultado(2,1, true, false));
 
+        //se agregan los equipos al grupo C
+        C.addEquipo(Argentina);
+        C.addEquipo(arabiaSaudita);
+        C.addEquipo(Polonia);
+        C.addEquipo(Mexico);
+
         //se agregan los partidos al grupo C
         C.addPartido(nro1);
         C.addPartido(nro2);
@@ -35,15 +41,7 @@ public class Main {
 
         //impresion de pantalla
         System.out.println(C);
-        System.out.println(Argentina);
-        System.out.println(arabiaSaudita);
-        System.out.println(Polonia);
-        System.out.println(Mexico);
-        System.out.println(nro1);
-        System.out.println(nro2);
-        System.out.println(nro3);
-        System.out.println(nro4);
-        System.out.println(nro5);
-        System.out.println(nro6);
+        
+
     }
 }

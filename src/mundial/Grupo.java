@@ -29,6 +29,6 @@ public class Grupo extends EtapaMundial {
 
     @Override
     public String toString() {
-        return getDescripcionEtapa();
+        return getDescripcionEtapa() +"\nEquipos: " + getEquipos() +"\nPartidos: " + getPartidos();
     }
 }
