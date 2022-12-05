@@ -24,18 +24,13 @@ public class Main {
         C.addEquipo(Polonia);
         C.addEquipo(Mexico);
 
-        //partidos y agregado de puntos
+        //partidos
         Partido nro1 = new Partido(new Date(2022,10,22), Argentina, arabiaSaudita, new Resultado(1, 2, false,false));
         Partido nro2 = new Partido(new Date(2022,10,22), Polonia, Mexico, new Resultado(0,0, false, true));
         Partido nro3 = new Partido(new Date(2022,10,26), Argentina, Mexico, new Resultado(2,0, true, false));
         Partido nro4 = new Partido(new Date(2022,10,26), Polonia, arabiaSaudita, new Resultado(2,0, true, false));
         Partido nro5 = new Partido(new Date(2022,10,30), Argentina, Polonia, new Resultado(2,0, true, false));
         Partido nro6 = new Partido(new Date(2022,10,30), Mexico, arabiaSaudita, new Resultado(2,1, true, false));
-        Argentina.setPuntos(6);
-        Polonia.setPuntos(4);
-        Mexico.setPuntos(4);
-        arabiaSaudita.setPuntos(3);
-
 
         //se agregan los partidos al grupo C
         C.addPartido(nro1);
@@ -45,16 +40,23 @@ public class Main {
         C.addPartido(nro5);
         C.addPartido(nro6);
 
+        //agregado de puntos
+        Argentina.setPuntos(6);
+        Polonia.setPuntos(4);
+        Mexico.setPuntos(4);
+        arabiaSaudita.setPuntos(3);
+
+        //se agregan al Array los equipos que pasan
+        C.setEquipoQuePasa(Argentina);
+        C.setEquipoQuePasa(Polonia);
+
+
         //impresion de pantalla
         System.out.println(C);
         System.out.println("\nPuntos del grupo: \n\n" + Argentina.getNombre() + " tiene " + Argentina.getPuntos() + " puntos\n"
                 + Polonia.getNombre() + " tiene " + Polonia.getPuntos() + " puntos\n"
                 + Mexico.getNombre() + " tiene " + Mexico.getPuntos() + " puntos\n"
                 + arabiaSaudita.getNombre() + " tiene " + arabiaSaudita.getPuntos() + " puntos\n");
-
-        C.setEquipoQuePasa(Argentina);
-        C.setEquipoQuePasa(Polonia);
-
         System.out.println("Equipos del grupo C que avanzaron: " + C.getEquiposQueAvanzan());
 
     }
